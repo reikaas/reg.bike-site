@@ -17,7 +17,7 @@ async def main():
                 await pg.goto(base + path, wait_until="networkidle")
                 await pg.evaluate("document.fonts.ready")
                 # trigger lazy images, then return to top
-                await pg.evaluate("async()=>{for(let y=0;y<document.body.scrollHeight;y+=400){window.scrollTo(0,y);await new Promise(r=>setTimeout(r,60))}window.scrollTo(0,0)}")
+                await pg.evaluate("async()=>{for(let y=0;y<document.body.scrollHeight;y+=400){window.scrollTo({top:y,behavior:"instant"});await new Promise(r=>setTimeout(r,60))}window.scrollTo({top:0,behavior:"instant"});await new Promise(r=>setTimeout(r,200))}")
                 await pg.wait_for_load_state("networkidle")
                 await pg.screenshot(path=f"{out}/{dev}-{name}-full.png", full_page=True)
                 await pg.screenshot(path=f"{out}/{dev}-{name}.png")
