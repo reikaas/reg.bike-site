@@ -1,0 +1,12 @@
+{
+  "name": "reg.bike – Norsk sykkelregister",
+  "short_name": "reg.bike",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}
+  ],
+  "start_url": "/",
+  "theme_color": "#0E2442",
+  "background_color": "#FFFFFF",
+  "display": "standalone"
+}
