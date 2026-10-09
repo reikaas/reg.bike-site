@@ -11,11 +11,11 @@ TPL = """<!doctype html><html><head><meta charset="utf-8"><style>
 html,body{margin:0;width:1200px;height:630px;overflow:hidden}
 body{background:#0E2442;color:#fff;font-family:P,sans-serif;position:relative}
 body::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% 45%,rgba(37,64,107,.95),rgba(14,36,66,0) 55%)}
-.l{position:absolute;left:84px;top:86px;width:640px}
+.l{position:absolute;left:84px;top:86px;width:720px}
 .logo{height:76px;display:block}
 .soon{display:inline-flex;align-items:center;gap:10px;margin-top:46px;padding:7px 18px 7px 14px;border:2px solid rgba(255,255,255,.35);border-radius:999px;font-weight:600;font-size:20px;letter-spacing:.08em;text-transform:uppercase}
 .soon::before{content:"";width:12px;height:12px;border-radius:50%;background:#FF6600;box-shadow:0 0 0 4px rgba(255,102,0,.25)}
-h1{font-size:68px;line-height:1.05;margin:26px 0 20px;letter-spacing:-.02em}
+h1{font-size:58px;line-height:1.06;margin:26px 0 20px;letter-spacing:-.02em}
 h1 span{color:#FF6600}
 p{font-size:28px;line-height:1.35;color:#D4DAE2;margin:0}
 .url{position:absolute;left:84px;bottom:58px;font-family:M;font-size:26px;color:#fff}
@@ -31,8 +31,8 @@ p{font-size:28px;line-height:1.35;color:#D4DAE2;margin:0}
 <div class="tube"></div><img class="st" src="img/sticker-portrait-30x60-color@2x.png">
 <div class="bar"></div></body></html>"""
 VARIANTS = {
-  "og-image.png": dict(soon="Kommer snart", h1="Registrert.<br>Sporbar. <span>Din.</span>", p="Norsk sykkelregister med QR-merke.<br>Sjekk om en sykkel er meldt stjålet."),
-  "og-image-en.png": dict(soon="Coming soon", h1="Registered.<br>Traceable. <span>Yours.</span>", p="A Norwegian bike registry with QR stickers.<br>Check whether a bike is reported stolen."),
+  "og-image.png": dict(soon="Kommer snart", h1="Din sykkel –<br>registrert og <span>sporbar.</span>", p="Norsk sykkelregister med QR-merke.<br>Sjekk om en sykkel er meldt stjålet."),
+  "og-image-en.png": dict(soon="Coming soon", h1="Your bike –<br>registered and <span>traceable.</span>", p="A Norwegian bike registry with QR stickers.<br>Check whether a bike is reported stolen."),
 }
 async def main():
     async with async_playwright() as pw:
