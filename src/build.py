@@ -30,23 +30,24 @@ NB = dict(
     lang="nb", locale="nb_NO", alt_locale="en_GB", prefix="", url=f"{SITE}/", alt_url=f"{SITE}/en/",
     og_image=f"{SITE}/og-image.png",
     title="reg.bike – norsk sykkelregister · Kommer snart",
-    desc="Registrer sykkelen og rammenummeret, og få ditt eget QR-merke. Alle som finner sykkelen eller vil kjøpe den, kan sjekke om den er meldt stjålet. Kommer snart.",
+    desc="Registrer sykkelen gratis og få ditt eget QR-merke. Skriv det ut selv, eller bestill slitesterke merker i posten. Alle som finner sykkelen eller vil kjøpe den, kan sjekke om den er meldt stjålet. Kommer snart.",
     og_title="reg.bike · Din sykkel – registrert og sporbar.",
     og_alt="reg.bike-logoen og et QR-merke til sykkelen med teksten «Din sykkel – registrert og sporbar.»",
     skip="Gå til hovedinnholdet", home_label="reg.bike – til forsiden", nav_label="Hovedmeny",
-    nav=[("#slik", "Slik fungerer det"), ("#fordeler", "Fordeler"), ("#merket", "Klistremerket"), ("#personvern", "Personvern")],
+    nav=[("#slik", "Slik fungerer det"), ("#fordeler", "Fordeler"), ("#merket", "Klistremerket"), ("#pris", "Pris"), ("#personvern", "Personvern")],
     other_lang="English", other_lang_code="en", other_href="en/", other_label="Read this page in English",
     nav_cta="Få beskjed",
     soon="Kommer snart", slogan="Din sykkel&nbsp;– registrert og sporbar.",
     h1="Registrer sykkelen. Få den igjen hvis den blir stjålet.",
     lead="reg.bike er et nytt norsk sykkelregister. Du registrerer rammenummeret og fester et QR-merke på sykkelen. Da kan alle som finner den eller vil kjøpe den, sjekke på sekunder om den er meldt stjålet.",
     cta="Få beskjed når vi åpner", cta2="Slik fungerer det",
-    fine="Gratis å registrere. Du trenger ingen app, bare kameraet på mobilen.",
+    perks=["<strong>Gratis</strong> å registrere", "Skriv ut klistremerket <strong>gratis</strong> hjemme", "Eller bestill slitesterke merker i posten for en liten sum"],
+    fine="Du trenger ingen app, bare kameraet på mobilen.",
     hero_img_alt="Eksempel på et stående reg.bike-merke til seterøret: «Registrert · Sporbar», sykkel-ID K7M3-9QX2-C, QR-kode og teksten «Funnet sykkelen? Skann og kontakt eieren».",
     how_k="Slik fungerer det", how_h="Tre steg, så er sykkelen merket",
     how_i="Registreringen tar et par minutter. Etter det gjør klistremerket jobben.",
-    steps=[(ICON_REGISTER, "Registrer", "Opprett en konto og legg inn merke, modell, farge, rammenummer og bilder av sykkelen."),
-           (ICON_STICKER, "Merk sykkelen", "Du får ditt eget QR-merke. Skriv det ut selv, eller bestill slitesterke klistremerker som vi sender i posten. Fest merket på rammen."),
+    steps=[(ICON_REGISTER, "Registrer gratis", "Opprett en gratis konto og legg inn merke, modell, farge, rammenummer og bilder av sykkelen."),
+           (ICON_STICKER, "Merk sykkelen", "Du får ditt eget QR-merke. Skriv det ut gratis hjemme, eller bestill slitesterke klistremerker i posten for en liten sum. Fest merket på rammen."),
            (ICON_SCAN, "Skann og sjekk", "Alle kan skanne merket eller slå opp koden og se med en gang om sykkelen er registrert eller meldt stjålet.")],
     ben_k="Fordeler", ben_h="Til nytte for eier, finner og kjøper",
     ben_i="Ett klistremerke på rammen gjør det enklere for alle tre.",
@@ -60,9 +61,14 @@ NB = dict(
     st_alt2="Liggende reg.bike-merke med teksten «Registrert sykkel», QR-kode, koden K7M3-9QX2-C og «Skann og se om den er stjålet»",
     st_note="Eksempel. Kodeformatet og utseendet kan endres før lansering.",
     facts=[(FACT_QR, "Unik kode for hver sykkel", "QR-koden åpner <span class=\"url\">reg.bike/id/&lt;kode&gt;</span>. Koden står også i klartekst, så du kan skrive den inn selv."),
-           (FACT_DROP, "Bestill eller skriv ut selv", "Bestill slitesterke, værbestandige merker fra oss, eller skriv dem ut gratis hjemme."),
+           (FACT_DROP, "Skriv ut gratis eller bestill", "Skriv ut merket gratis hjemme, eller bestill slitesterke, værbestandige merker fra oss til en lav pris."),
            (FACT_PHONE, "Fungerer med alle mobiler", "Du trenger ingen app. Statusen vises rett i nettleseren:")],
     pill_ok="✓ Registrert", pill_bad="! Meldt stjålet",
+    pc_k="Pris", pc_h="Hva koster det?",
+    pc_i="Registreringen er gratis. Du betaler bare hvis du vil ha slitesterke klistremerker i posten.",
+    prices=[("free", "Registrering", "Gratis", "Konto, rammenummer, bilder og en offentlig statusside for sykkelen."),
+            ("free", "Skriv ut selv", "Gratis", "Last ned merket som PDF og skriv det ut på etikettark eller etikettskriver."),
+            ("paid", "Merker i posten", "Liten sum", "Slitesterke, værbestandige klistremerker sendt hjem til deg. Vi setter prisen før lansering.")],
     pr_k="Personvern", pr_h="Eieren forblir anonym",
     pr_lead="Offentlige sider viser aldri eierens navn, e-post, telefonnummer eller adresse.",
     pr_list=["Den som skanner merket, ser bare sykkelens status og beskrivelse.",
@@ -83,23 +89,24 @@ EN = dict(
     lang="en", locale="en_GB", alt_locale="nb_NO", prefix="../", url=f"{SITE}/en/", alt_url=f"{SITE}/",
     og_image=f"{SITE}/og-image-en.png",
     title="reg.bike – the Norwegian bike registry · Coming soon",
-    desc="Register your bike's frame number and get a unique QR sticker. Anyone who finds your bike or wants to buy it can check whether it is registered or reported stolen. Coming soon.",
+    desc="Register your bike for free and get a unique QR sticker. Print it yourself or order durable stickers by post. Anyone who finds your bike or wants to buy it can check whether it is registered or reported stolen. Coming soon.",
     og_title="reg.bike · Your bike – registered and traceable.",
     og_alt="reg.bike logo and a QR bike sticker with the words “Your bike – registered and traceable.”",
     skip="Skip to content", home_label="reg.bike – home", nav_label="Main menu",
-    nav=[("#how", "How it works"), ("#benefits", "Benefits"), ("#sticker", "The sticker"), ("#privacy", "Privacy")],
+    nav=[("#how", "How it works"), ("#benefits", "Benefits"), ("#sticker", "The sticker"), ("#pricing", "Pricing"), ("#privacy", "Privacy")],
     other_lang="Norsk", other_lang_code="nb", other_href="../", other_label="Les siden på norsk",
     nav_cta="Get notified",
     soon="Coming soon", slogan="Your bike&nbsp;– registered and traceable.",
     h1="Register your bike. Get it back.",
     lead="reg.bike is a new Norwegian bike registry. Register the frame number, put a QR sticker on your bike, and let anyone who finds it or is thinking of buying it check in seconds whether it has been reported stolen.",
     cta="Tell me when you launch", cta2="How it works",
-    fine="Free to register. No app – a phone camera is all it takes.",
+    perks=["<strong>Free</strong> to register", "Print your sticker at home for <strong>free</strong>", "Or order durable stickers by post for a small fee"],
+    fine="No app – a phone camera is all it takes.",
     hero_img_alt="Example of a portrait reg.bike sticker on a seat tube, showing bike ID K7M3-9QX2-C, a QR code and the text “Found this bike? Scan to contact the owner” in Norwegian.",
     how_k="How it works", how_h="Three steps from frame number to marked bike",
     how_i="Registering a bike takes a couple of minutes. The sticker does the rest.",
-    steps=[(ICON_REGISTER, "Register", "Create an account and add the make, model, colour, frame number and photos of your bike."),
-           (ICON_STICKER, "Mark your bike", "You get a unique QR sticker. Print it yourself, or order durable stickers by post, and put it on the frame."),
+    steps=[(ICON_REGISTER, "Register for free", "Create a free account and add the make, model, colour, frame number and photos of your bike."),
+           (ICON_STICKER, "Mark your bike", "You get a unique QR sticker. Print it at home for free, or order durable stickers by post for a small fee. Put it on the frame."),
            (ICON_SCAN, "Scan and check", "Anyone can scan the sticker or look up the code and see right away whether the bike is registered or reported stolen.")],
     ben_k="Benefits", ben_h="Useful for everyone who deals with bikes",
     ben_i="One sticker on the frame helps the owner, whoever finds the bike, and whoever wants to buy it.",
@@ -113,9 +120,14 @@ EN = dict(
     st_alt2="Landscape reg.bike sticker reading “Registered bike” in Norwegian, with a QR code, the code K7M3-9QX2-C and “Scan to see if it's stolen”",
     st_note="Example only. The code format and design may change before launch.",
     facts=[(FACT_QR, "A unique code for every bike", "The QR code opens <span class=\"url\">reg.bike/id/&lt;code&gt;</span>. The code is printed in plain text too, so it can be typed in."),
-           (FACT_DROP, "Made to live on a bike", "Order durable stickers by post, or print them at home for free."),
+           (FACT_DROP, "Print free or order", "Print the sticker at home for free, or order durable, weatherproof stickers from us at a low price."),
            (FACT_PHONE, "Works with any phone camera", "No app to download. Whoever scans it sees the status right in the browser:")],
     pill_ok="✓ Registered", pill_bad="! Reported stolen",
+    pc_k="Pricing", pc_h="What does it cost?",
+    pc_i="Registration is free. You only pay if you want durable stickers sent by post.",
+    prices=[("free", "Registration", "Free", "Account, frame number, photos and a public status page for your bike."),
+            ("free", "Print it yourself", "Free", "Download the sticker as a PDF and print it on label sheets or a label printer."),
+            ("paid", "Stickers by post", "Small fee", "Durable, weatherproof stickers sent to your door. We’ll set the price before launch.")],
     pr_k="Privacy", pr_h="The owner stays anonymous",
     pr_lead="Public pages never show the owner's name, email, phone number or address.",
     pr_list=["Whoever scans the sticker only sees the bike's status and description.",
@@ -133,8 +145,8 @@ EN = dict(
     ft_nav="Footer", ft_contact="Contact",
 )
 # Section ids per language
-IDS = {"nb": dict(how="slik", ben="fordeler", st="merket", pr="personvern", nt="beskjed"),
-       "en": dict(how="how", ben="benefits", st="sticker", pr="privacy", nt="notify")}
+IDS = {"nb": dict(how="slik", ben="fordeler", st="merket", pc="pris", pr="personvern", nt="beskjed"),
+       "en": dict(how="how", ben="benefits", st="sticker", pc="pricing", pr="privacy", nt="notify")}
 
 CSP = "default-src 'none'; img-src 'self' data:; style-src 'self'; font-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'"
 
@@ -185,6 +197,8 @@ def page(p):
     cards = "\n".join(f'''      <article class="card {cls}"><h3>{t}</h3><ul>{"".join(f"<li>{x}</li>" for x in items)}</ul></article>''' for cls, t, items in p["cards"])
     facts = "\n".join(f'''        <li>{ic}<div><strong>{t}</strong>{b}</div></li>''' for ic, t, b in p["facts"])
     prl = "".join(f"<li>{x}</li>" for x in p["pr_list"])
+    perks = "".join(f"<li>{x}</li>" for x in p["perks"])
+    prices = "\n".join(f'''      <article class="price {cls}"><h3>{t}</h3><p class="amt">{a}</p><p>{b}</p></article>''' for cls, t, a, b in p["prices"])
     return f'''<!doctype html>
 <html lang="{p["lang"]}">
 <head>
@@ -216,6 +230,7 @@ def page(p):
         <a class="btn" href="{mt}">{MAIL_ICON}{p["cta"]}</a>
         <a class="btn ghost" href="#{ids["how"]}">{p["cta2"]}</a>
       </div>
+      <ul class="perks">{perks}</ul>
       <p class="fine">{p["fine"]}</p>
     </div>
     <div class="tube">
@@ -279,7 +294,18 @@ def page(p):
   </div>
 </section>
 
-<section class="section alt" id="{ids["pr"]}" aria-labelledby="pr-title">
+<section class="section alt" id="{ids["pc"]}" aria-labelledby="pc-title">
+  <div class="wrap">
+    <p class="kicker">{p["pc_k"]}</p>
+    <h2 id="pc-title">{p["pc_h"]}</h2>
+    <p class="intro">{p["pc_i"]}</p>
+    <div class="prices">
+{prices}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="{ids["pr"]}" aria-labelledby="pr-title">
   <div class="wrap">
     <div class="privacy">
       {SHIELD}
