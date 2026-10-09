@@ -30,53 +30,53 @@ NB = dict(
     lang="nb", locale="nb_NO", alt_locale="en_GB", prefix="", url=f"{SITE}/", alt_url=f"{SITE}/en/",
     og_image=f"{SITE}/og-image.png",
     title="reg.bike – norsk sykkelregister · Kommer snart",
-    desc="Registrer sykkelen med rammenummer og få et unikt QR-merke. Alle som finner eller vil kjøpe sykkelen, kan sjekke om den er registrert eller meldt stjålet. Kommer snart.",
+    desc="Registrer sykkelen og rammenummeret, og få ditt eget QR-merke. Alle som finner sykkelen eller vil kjøpe den, kan sjekke om den er meldt stjålet. Kommer snart.",
     og_title="reg.bike – Registrert. Sporbar. Din.",
-    og_alt="reg.bike-logo og et QR-merke for sykkel med teksten «Registrert. Sporbar. Din.»",
-    skip="Hopp til innhold", home_label="reg.bike – til forsiden", nav_label="Hovedmeny",
-    nav=[("#slik", "Slik virker det"), ("#fordeler", "Fordeler"), ("#merket", "Merket"), ("#personvern", "Personvern")],
+    og_alt="reg.bike-logoen og et QR-merke til sykkelen med teksten «Registrert. Sporbar. Din.»",
+    skip="Gå til hovedinnholdet", home_label="reg.bike – til forsiden", nav_label="Hovedmeny",
+    nav=[("#slik", "Slik fungerer det"), ("#fordeler", "Fordeler"), ("#merket", "Klistremerket"), ("#personvern", "Personvern")],
     other_lang="English", other_lang_code="en", other_href="en/", other_label="Read this page in English",
     nav_cta="Få beskjed",
     soon="Kommer snart", slogan="Registrert. Sporbar. Din.",
-    h1="Registrer sykkelen din. Få den tilbake.",
-    lead="reg.bike er et nytt norsk sykkelregister. Registrer rammenummeret, fest et QR-merke på sykkelen, og la alle som finner den eller vurderer å kjøpe den, sjekke på sekunder om den er meldt stjålet.",
-    cta="Få beskjed når vi lanserer", cta2="Slik virker det",
-    fine="Gratis å registrere. Ingen app – kameraet på mobilen holder.",
-    hero_img_alt="Eksempel på et stående reg.bike-merke på et seterør: «Tyverisikret registrert», sykkel-ID K7M3-9QX2-C, QR-kode og teksten «Funnet? Skann for å finne eieren».",
-    how_k="Slik virker det", how_h="Tre steg fra rammenummer til merket sykkel",
-    how_i="Det tar et par minutter å registrere en sykkel. Merket gjør resten.",
-    steps=[(ICON_REGISTER, "Registrer", "Lag en konto og legg inn merke, modell, farge, rammenummer og bilder av sykkelen."),
-           (ICON_STICKER, "Merk sykkelen", "Du får et unikt QR-merke. Skriv det ut selv, eller bestill slitesterke merker i posten, og fest det på rammen."),
-           (ICON_SCAN, "Skann og sjekk", "Alle kan skanne merket eller søke opp koden og se med en gang om sykkelen er registrert eller meldt stjålet.")],
-    ben_k="Fordeler", ben_h="Nyttig for alle som har med sykler å gjøre",
-    ben_i="Ett merke på rammen hjelper eieren, den som finner sykkelen og den som vil kjøpe den.",
-    cards=[("owner", "For deg som eier sykkelen", ["Rammenummer, bilder og kjennetegn samlet på ett sted", "Meld sykkelen stjålet – alle som skanner den, ser det med en gang", "Merket viser at sykkelen er registrert og sporbar", "Alt klart når du skal anmelde tyveriet til politiet"]),
-           ("finder", "For deg som finner en sykkel", ["Skann merket med mobilkameraet – ingen app trengs", "Se om sykkelen er meldt stjålet", "Send eieren en melding gjennom reg.bike uten å se hvem eieren er"]),
+    h1="Registrer sykkelen. Få den igjen hvis den blir stjålet.",
+    lead="reg.bike er et nytt norsk sykkelregister. Du registrerer rammenummeret og fester et QR-merke på sykkelen. Da kan alle som finner den eller vil kjøpe den, sjekke på sekunder om den er meldt stjålet.",
+    cta="Få beskjed når vi åpner", cta2="Slik fungerer det",
+    fine="Gratis å registrere. Du trenger ingen app, bare kameraet på mobilen.",
+    hero_img_alt="Eksempel på et stående reg.bike-merke til seterøret: «Registrert · Sporbar», sykkel-ID K7M3-9QX2-C, QR-kode og teksten «Funnet sykkelen? Skann og kontakt eieren».",
+    how_k="Slik fungerer det", how_h="Tre steg, så er sykkelen merket",
+    how_i="Registreringen tar et par minutter. Etter det gjør klistremerket jobben.",
+    steps=[(ICON_REGISTER, "Registrer", "Opprett en konto og legg inn merke, modell, farge, rammenummer og bilder av sykkelen."),
+           (ICON_STICKER, "Merk sykkelen", "Du får ditt eget QR-merke. Skriv det ut selv, eller bestill slitesterke klistremerker som vi sender i posten. Fest merket på rammen."),
+           (ICON_SCAN, "Skann og sjekk", "Alle kan skanne merket eller slå opp koden og se med en gang om sykkelen er registrert eller meldt stjålet.")],
+    ben_k="Fordeler", ben_h="Til nytte for eier, finner og kjøper",
+    ben_i="Ett klistremerke på rammen gjør det enklere for alle tre.",
+    cards=[("owner", "For deg som eier sykkelen", ["Rammenummer, bilder og kjennetegn samlet på ett sted", "Meld sykkelen stjålet – alle som skanner den, ser det med en gang", "Merket viser at sykkelen er registrert og kan spores", "Alle opplysningene er klare når du anmelder tyveriet"]),
+           ("finder", "For deg som finner en sykkel", ["Skann merket med mobilkameraet – du trenger ingen app", "Se om sykkelen er meldt stjålet", "Send eieren en melding via reg.bike – eieren forblir anonym"]),
            ("buyer", "For deg som kjøper brukt", ["Sjekk koden eller rammenummeret før du betaler", "Se om sykkelen er meldt stjålet", "Tryggere handel for både kjøper og selger"])],
-    st_k="Merket", st_h="Et merke tyven ser",
-    st_i="Hver sykkel får sin egen kode. Merket finnes i stående format til seterøret og i liggende format.",
+    st_k="Klistremerket", st_h="Et tydelig signal til tyven",
+    st_i="Hver sykkel får sin egen kode. Merket finnes i to formater: stående, som passer på seterøret, og liggende.",
     st_cap1="Stående, 30&nbsp;×&nbsp;60&nbsp;mm", st_cap2="Liggende, 62&nbsp;×&nbsp;29&nbsp;mm",
     st_alt1="Stående reg.bike-merke med sykkel-ID og QR-kode",
-    st_alt2="Liggende reg.bike-merke med teksten «Registrert sykkel», QR-kode og koden K7M3-9QX2-C",
-    st_note="Eksempel. Koden og utformingen kan endres før lansering.",
-    facts=[(FACT_QR, "Unik kode for hver sykkel", "QR-koden går til <span class=\"url\">reg.bike/id/&lt;kode&gt;</span>. Koden står også i klartekst, så den kan tastes inn."),
-           (FACT_DROP, "Laget for å sitte på en sykkel", "Bestill slitesterke merker i posten, eller skriv dem ut gratis hjemme."),
-           (FACT_PHONE, "Virker med alle mobilkameraer", "Ingen app å laste ned. Den som skanner, ser statusen rett i nettleseren:")],
+    st_alt2="Liggende reg.bike-merke med teksten «Registrert sykkel», QR-kode, koden K7M3-9QX2-C og «Skann og se om den er stjålet»",
+    st_note="Eksempel. Kodeformatet og utseendet kan endres før lansering.",
+    facts=[(FACT_QR, "Unik kode for hver sykkel", "QR-koden åpner <span class=\"url\">reg.bike/id/&lt;kode&gt;</span>. Koden står også i klartekst, så du kan skrive den inn selv."),
+           (FACT_DROP, "Bestill eller skriv ut selv", "Bestill slitesterke, værbestandige merker fra oss, eller skriv dem ut gratis hjemme."),
+           (FACT_PHONE, "Fungerer med alle mobiler", "Du trenger ingen app. Statusen vises rett i nettleseren:")],
     pill_ok="✓ Registrert", pill_bad="! Meldt stjålet",
     pr_k="Personvern", pr_h="Eieren forblir anonym",
     pr_lead="Offentlige sider viser aldri eierens navn, e-post, telefonnummer eller adresse.",
     pr_list=["Den som skanner merket, ser bare sykkelens status og beskrivelse.",
              "Meldinger fra den som finner sykkelen, sendes videre til deg uten at kontaktinformasjonen din vises.",
              "Du velger selv om bildene av sykkelen skal vises offentlig.",
-             "Denne nettsiden bruker ingen informasjonskapsler, sporing eller analyseverktøy."],
-    nt_h="Få beskjed når vi lanserer",
+             "Denne siden bruker ikke informasjonskapsler, sporing eller analyseverktøy."],
+    nt_h="Få beskjed når vi åpner",
     nt_p="reg.bike er under utvikling. Send oss en e-post, så sier vi fra når du kan registrere sykkelen din.",
     nt_btn="Gi meg beskjed på e-post", nt_or="Eller skriv til",
-    nt_small="Vi bruker e-postadressen din bare til å si fra om lanseringen, og sletter den når du ber om det.",
-    mail_subject="Gi meg beskjed når reg.bike lanserer",
+    nt_small="Vi bruker bare e-postadressen din til å si fra når vi åpner, og sletter den når du vil.",
+    mail_subject="Gi meg beskjed når reg.bike åpner",
     mail_body="Hei!\n\nGi meg beskjed når jeg kan registrere sykkelen min på reg.bike.\n\n",
     ft_1="Norsk sykkelregister under utvikling.",
-    ft_2="reg.bike er en privat tjeneste og ingen offentlig myndighet.",
+    ft_2="reg.bike er en privat tjeneste, ikke en offentlig myndighet.",
     ft_nav="Bunnmeny", ft_contact="Kontakt",
 )
 EN = dict(
@@ -95,7 +95,7 @@ EN = dict(
     lead="reg.bike is a new Norwegian bike registry. Register the frame number, put a QR sticker on your bike, and let anyone who finds it or is thinking of buying it check in seconds whether it has been reported stolen.",
     cta="Tell me when you launch", cta2="How it works",
     fine="Free to register. No app – a phone camera is all it takes.",
-    hero_img_alt="Example of a portrait reg.bike sticker on a seat tube, showing bike ID K7M3-9QX2-C, a QR code and the text “Found it? Scan to find the owner” in Norwegian.",
+    hero_img_alt="Example of a portrait reg.bike sticker on a seat tube, showing bike ID K7M3-9QX2-C, a QR code and the text “Found this bike? Scan to contact the owner” in Norwegian.",
     how_k="How it works", how_h="Three steps from frame number to marked bike",
     how_i="Registering a bike takes a couple of minutes. The sticker does the rest.",
     steps=[(ICON_REGISTER, "Register", "Create an account and add the make, model, colour, frame number and photos of your bike."),
@@ -110,7 +110,7 @@ EN = dict(
     st_i="Every bike gets its own code. The sticker comes in a portrait format for the seat tube and a landscape format.",
     st_cap1="Portrait, 30&nbsp;×&nbsp;60&nbsp;mm", st_cap2="Landscape, 62&nbsp;×&nbsp;29&nbsp;mm",
     st_alt1="Portrait reg.bike sticker with bike ID and QR code",
-    st_alt2="Landscape reg.bike sticker reading “Registered bike” in Norwegian, with a QR code and the code K7M3-9QX2-C",
+    st_alt2="Landscape reg.bike sticker reading “Registered bike” in Norwegian, with a QR code, the code K7M3-9QX2-C and “Scan to see if it's stolen”",
     st_note="Example only. The code format and design may change before launch.",
     facts=[(FACT_QR, "A unique code for every bike", "The QR code opens <span class=\"url\">reg.bike/id/&lt;code&gt;</span>. The code is printed in plain text too, so it can be typed in."),
            (FACT_DROP, "Made to live on a bike", "Order durable stickers by post, or print them at home for free."),
@@ -221,7 +221,7 @@ def page(p):
     <div class="tube">
       <picture>
         <source type="image/webp" srcset="{a}img/sticker-portrait-30x60-color.webp 1x, {a}img/sticker-portrait-30x60-color@2x.webp 2x">
-        <img src="{a}img/sticker-portrait-30x60-color.png" srcset="{a}img/sticker-portrait-30x60-color@2x.png 2x" width="300" height="621" alt="{html.escape(p["hero_img_alt"])}" fetchpriority="high">
+        <img src="{a}img/sticker-portrait-30x60-color.png" srcset="{a}img/sticker-portrait-30x60-color@2x.png 2x" width="300" height="622" alt="{html.escape(p["hero_img_alt"])}" fetchpriority="high">
       </picture>
     </div>
   </div>
@@ -266,7 +266,7 @@ def page(p):
     <div>
       <div class="sticker-show">
         <figure class="portrait">
-          <picture><source type="image/webp" srcset="{a}img/sticker-portrait-30x60-color.webp 1x, {a}img/sticker-portrait-30x60-color@2x.webp 2x"><img src="{a}img/sticker-portrait-30x60-color.png" width="300" height="621" alt="{html.escape(p["st_alt1"])}" decoding="async"></picture>
+          <picture><source type="image/webp" srcset="{a}img/sticker-portrait-30x60-color.webp 1x, {a}img/sticker-portrait-30x60-color@2x.webp 2x"><img src="{a}img/sticker-portrait-30x60-color.png" width="300" height="622" alt="{html.escape(p["st_alt1"])}" decoding="async"></picture>
           <figcaption>{p["st_cap1"]}</figcaption>
         </figure>
         <figure class="landscape">
@@ -339,11 +339,11 @@ def notfound():
   <div class="box">
     <p class="code">404</p>
     <h1>Siden finnes ikke (ennå)</h1>
-    <p><strong>Skannet du et reg.bike-merke?</strong> Registeret åpner snart. Da vises sykkelens status her når merket skannes.</p>
+    <p><strong>Skannet du et reg.bike-merke?</strong> Registeret åpner snart. Da ser du sykkelens status her når du skanner merket.</p>
     <p lang="en" class="hint">Page not found. Scanned a reg.bike sticker? The registry opens soon, and scanning will then show the bike's status here.</p>
     <div class="actions">
       <a class="btn" href="/">Til forsiden</a>
-      <a class="btn secondary" href="/#beskjed">Få beskjed ved lansering</a>
+      <a class="btn secondary" href="/#beskjed">Få beskjed når vi åpner</a>
     </div>
   </div>
 </main>
