@@ -37,7 +37,7 @@ NB = dict(
     nav=[("#slik", "Slik fungerer det"), ("#fordeler", "Fordeler"), ("#merket", "Klistremerket"), ("#pris", "Pris"), ("#personvern", "Personvern")],
     other_lang="English", other_lang_code="en", other_href="en/", other_label="Read this page in English",
     nav_cta="Få beskjed",
-    soon="Kommer snart", slogan="Din sykkel&nbsp;– registrert og sporbar.",
+    strip="Gratis å registrere · Registerdata lagres i EU (Frankfurt)", soon="Kommer snart", slogan="Din sykkel&nbsp;– registrert og sporbar.",
     h1="Registrer sykkelen. Få den igjen hvis den blir stjålet.",
     lead="reg.bike er et nytt norsk sykkelregister. Du registrerer rammenummeret og fester et QR-merke på sykkelen. Da kan alle som finner den eller vil kjøpe den, sjekke på sekunder om den er meldt stjålet.",
     cta="Få beskjed når vi åpner", cta2="Slik fungerer det",
@@ -96,7 +96,7 @@ EN = dict(
     nav=[("#how", "How it works"), ("#benefits", "Benefits"), ("#sticker", "The sticker"), ("#pricing", "Pricing"), ("#privacy", "Privacy")],
     other_lang="Norsk", other_lang_code="nb", other_href="../", other_label="Les siden på norsk",
     nav_cta="Get notified",
-    soon="Coming soon", slogan="Your bike&nbsp;– registered and traceable.",
+    strip="Free to register · Registry data is stored in the EU (Frankfurt)", soon="Coming soon", slogan="Your bike&nbsp;– registered and traceable.",
     h1="Register your bike. Get it back.",
     lead="reg.bike is a new Norwegian bike registry. Register the frame number, put a QR sticker on your bike, and let anyone who finds it or is thinking of buying it check in seconds whether it has been reported stolen.",
     cta="Tell me when you launch", cta2="How it works",
@@ -159,6 +159,7 @@ def head(t, p, abs_assets=False, extra=""):
 <title>{t}</title>
 {extra}<meta name="theme-color" content="#0E2442">
 <link rel="preload" href="{a}fonts/IBMPlexSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{a}fonts/IBMPlexSansCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{a}style.css">
 <link rel="icon" href="{a}favicon.ico" sizes="48x48">
 <link rel="icon" href="{a}favicon.svg" type="image/svg+xml">
@@ -206,9 +207,10 @@ def page(p):
 </head>
 <body>
 <a class="skip" href="#main">{p["skip"]}</a>
+<div class="strip"><div class="wrap">{p["strip"]}</div></div>
 <header class="top">
   <div class="wrap bar">
-    <a class="brand" href="{a or './'}" aria-label="{p["home_label"]}"><img src="{a}img/lockup.svg" alt="reg.bike" width="128" height="35"></a>
+    <a class="brand" href="{a or './'}" aria-label="{p["home_label"]}"><img src="{a}img/lockup-reverse.svg" alt="reg.bike" width="128" height="35"></a>
     <nav aria-label="{p["nav_label"]}">
      <ul class="nav">
 {nav}
@@ -334,7 +336,7 @@ def page(p):
 <footer class="foot">
   <div class="wrap">
     <div>
-      <img src="{a}img/lockup.svg" alt="reg.bike" width="110" height="30" loading="lazy">
+      <img src="{a}img/lockup-reverse.svg" alt="reg.bike" width="110" height="30" loading="lazy">
       <p>{p["ft_1"]} {p["ft_2"]}</p>
       <p>© 2026 reg.bike</p>
     </div>
@@ -359,7 +361,7 @@ def notfound():
 {head("Siden finnes ikke · reg.bike", p, abs_assets=True, extra='<meta name="robots" content="noindex">\n')}
 </head>
 <body>
-<header class="top"><div class="wrap bar"><a class="brand" href="/" aria-label="reg.bike – til forsiden"><img src="/img/lockup.svg" alt="reg.bike" width="128" height="35"></a>
+<header class="top"><div class="wrap bar"><a class="brand" href="/" aria-label="reg.bike – til forsiden"><img src="/img/lockup-reverse.svg" alt="reg.bike" width="128" height="35"></a>
 <nav aria-label="Språk"><ul class="nav"><li><a class="lang" href="/en/" hreflang="en" lang="en">English</a></li></ul></nav></div></header>
 <main id="main" class="wrap nf">
   <div class="box">

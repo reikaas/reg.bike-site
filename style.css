@@ -175,3 +175,41 @@ section{scroll-margin-top:1rem}
 @media (max-width:900px){.prices{grid-template-columns:1fr}}
 @media print{.perks li,.perks li strong{color:#000}}
 .nav a{white-space:nowrap}
+
+/* ===== Redesign 2026-10: registry security print + sporty accents. Red only for stolen. ===== */
+@font-face{font-family:"IBM Plex Sans Condensed";font-weight:700;font-style:normal;font-display:swap;src:url(fonts/IBMPlexSansCondensed-Bold.woff2) format("woff2")}
+:root{--cond:"IBM Plex Sans Condensed","IBM Plex Sans",system-ui,sans-serif;--ink:#0B1D36;--shadow:0 1px 2px rgba(14,36,66,.06),0 10px 28px -14px rgba(14,36,66,.28)}
+.strip{background:var(--ink);color:#C9D3E2;font-size:.8rem;letter-spacing:.04em;padding:.32rem 0}
+.top{position:relative;background:url(img/guilloche.svg) repeat-x center/240px 120px,linear-gradient(100deg,#0E2442,#163257 55%,#0E2442);border-bottom:0;box-shadow:0 2px 0 var(--orange)}
+.top::after{content:"";position:absolute;right:0;bottom:-2px;width:min(36%,400px);height:6px;background:repeating-linear-gradient(-60deg,var(--orange) 0 14px,transparent 14px 22px)}
+.top .nav a:not(.btn){color:#fff}
+.top .nav a:not(.btn):hover{color:#FFB37F}
+.top a:focus-visible{outline-color:#fff}
+.hero{background:url(img/guilloche.svg) repeat-x 0 88%/240px 120px,radial-gradient(120% 140% at 80% 25%,#25406B 0,#0E2442 55%,#0A1B33 100%)}
+.hero::before{background:none;inset:auto;top:-10%;bottom:-10%;right:30%;width:52px;background:var(--orange);transform:skewX(-18deg);opacity:.95}
+.hero::after{content:"";position:absolute;top:-10%;bottom:-10%;right:calc(30% - 40px);width:14px;background:var(--orange);transform:skewX(-18deg);opacity:.95;pointer-events:none}
+.hero h1{font-family:var(--cond);text-transform:uppercase;font-size:clamp(2.4rem,1.4rem + 4.2vw,4.4rem);line-height:.94;letter-spacing:-.005em}
+.hero .slogan{display:inline-block;background:var(--orange);color:var(--navy);padding:.2rem .75rem;transform:skewX(-12deg);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.85rem}
+.hero .soon{font-family:var(--cond);letter-spacing:.18em;text-transform:uppercase}
+.hero .tube{position:relative;z-index:1}
+.hero .tube img{filter:drop-shadow(0 18px 30px rgba(0,0,0,.45))}
+.btn{background:linear-gradient(180deg,#FF7A1F,#FF6600);border:1px solid #E55A00;box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 3px 10px -3px rgba(184,71,0,.55);font-weight:700}
+.hero .btn{clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);border-radius:0;padding:.9rem 1.4rem;font-size:1.08rem}
+.hero .btn.ghost{background:transparent;border:0;box-shadow:inset 0 0 0 2px #fff;color:#fff;clip-path:none;border-radius:4px}
+.kicker{font-family:var(--cond);text-transform:uppercase;letter-spacing:.12em;display:inline-flex;align-items:center;gap:.5rem}
+.kicker::before{content:"";width:22px;height:8px;background:var(--orange);transform:skewX(-24deg)}
+.section h2{font-family:var(--cond);text-transform:uppercase;letter-spacing:.01em;font-size:clamp(1.8rem,1.3rem + 1.8vw,2.6rem);line-height:1}
+.section.alt{background:#EEF1F6 url(img/guilloche-light.svg) repeat-x 0 100%/240px 120px;position:relative}
+.section.alt::before{content:"";position:absolute;top:0;left:0;right:0;height:8px;background:repeating-linear-gradient(-60deg,var(--navy) 0 2px,transparent 2px 10px);opacity:.15}
+.card,.price,.step{box-shadow:var(--shadow);position:relative}
+.card::after,.price::after{content:"";position:absolute;inset:5px;border:1px solid rgba(14,36,66,.07);border-radius:9px;pointer-events:none}
+.step .num{font-family:var(--cond)}
+.price .amt{font-family:var(--cond);text-transform:uppercase}
+.notify{background:url(img/guilloche.svg) repeat-x 0 100%/240px 120px,linear-gradient(135deg,#163257,#0E2442 60%,#0A1B33);color:#fff;position:relative;overflow:hidden}
+.notify h2{color:#fff;font-family:var(--cond);text-transform:uppercase}
+.notify a:not(.btn){color:#fff}
+.notify .small,.notify p{color:#DCE3EE}
+.foot{background:url(img/guilloche.svg) repeat-x 0 0/240px 120px,linear-gradient(180deg,#0E2442,#0A1B33);color:#C9D3E2;border-top:4px solid var(--orange);margin-top:0}
+.foot a{color:#fff}
+@media (max-width:760px){.hero::before{right:4%;width:30px;bottom:auto;height:150px}.hero::after{right:calc(4% - 24px);width:9px;bottom:auto;height:150px}.top::after{width:40%}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
